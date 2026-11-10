@@ -1,0 +1,60 @@
+{
+  "cluster_name": {
+    "sensitive": false,
+    "type": "string",
+    "value": "eks-test"
+  },
+  "eniconfig_yaml": {
+    "sensitive": false,
+    "type": "string",
+    "value": "\"apiVersion\": \"crd.k8s.amazonaws.com/v1alpha1\"\n\"kind\": \"ENIConfig\"\n\"metadata\":\n  \"name\": \"us-east-1a\"\n\"spec\":\n  \"securityGroups\":\n  - \"sg-0bead7dfbcdf1c7cc\"\n  \"subnet\": \"subnet-00dfabb7465f389a2\"\n---\n\"apiVersion\": \"crd.k8s.amazonaws.com/v1alpha1\"\n\"kind\": \"ENIConfig\"\n\"metadata\":\n  \"name\": \"us-east-1b\"\n\"spec\":\n  \"securityGroups\":\n  - \"sg-0bead7dfbcdf1c7cc\"\n  \"subnet\": \"subnet-0ad876179084811c6\"\n---\n\"apiVersion\": \"crd.k8s.amazonaws.com/v1alpha1\"\n\"kind\": \"ENIConfig\"\n\"metadata\":\n  \"name\": \"us-east-1c\"\n\"spec\":\n  \"securityGroups\":\n  - \"sg-0bead7dfbcdf1c7cc\"\n  \"subnet\": \"subnet-0cf9a795b9e22c29a\"\n"
+  },
+  "pod_subnets": {
+    "sensitive": false,
+    "type": [
+      "object",
+      {
+        "us-east-1a": "string",
+        "us-east-1b": "string",
+        "us-east-1c": "string"
+      }
+    ],
+    "value": {
+      "us-east-1a": "100.64.0.0/18",
+      "us-east-1b": "100.64.64.0/18",
+      "us-east-1c": "100.64.128.0/18"
+    }
+  },
+  "private_subnets": {
+    "sensitive": false,
+    "type": [
+      "object",
+      {
+        "us-east-1a": "string",
+        "us-east-1b": "string",
+        "us-east-1c": "string"
+      }
+    ],
+    "value": {
+      "us-east-1a": "10.0.0.0/20",
+      "us-east-1b": "10.0.16.0/20",
+      "us-east-1c": "10.0.32.0/20"
+    }
+  },
+  "public_subnets": {
+    "sensitive": false,
+    "type": [
+      "object",
+      {
+        "us-east-1a": "string",
+        "us-east-1b": "string",
+        "us-east-1c": "string"
+      }
+    ],
+    "value": {
+      "us-east-1a": "10.0.48.0/24",
+      "us-east-1b": "10.0.49.0/24",
+      "us-east-1c": "10.0.50.0/24"
+    }
+  }
+}

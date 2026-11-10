@@ -1,0 +1,33 @@
+# Terraform local state and cache
+**/.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+
+# Variable files that may contain secrets
+*.tfvars
+*.tfvars.json
+!example.tfvars
+!*.tfvars.example
+
+# Override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Plan output
+*.tfplan
+tfplan
+
+# CLI config
+.terraformrc
+terraform.rc
+
+# Note: keep .terraform.lock.hcl committed
+
+# OS/editor
+.DS_Store
+.idea/
+.vscode/
